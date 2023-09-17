@@ -1,0 +1,19 @@
+t = int(input())
+while t>0:
+    a = input()
+    a+="asdjf"
+    b=""
+    c = list()
+    for i in range(len(a)-1):
+        if a[i].isdigit() and a[i+1].isdigit():
+            b+=a[i]
+        elif a[i].isdigit() and not a[i+1].isdigit():
+            b+=a[i]
+            c.append(b)
+            b=""
+    min=10000000000
+    for i in c:
+        if int(i)<min:
+            min=int(i)
+    print(min)
+    t-=1    
