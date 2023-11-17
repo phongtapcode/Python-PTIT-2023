@@ -1,0 +1,1 @@
+{"name":"Local: Lập hóa đơn 1","url":"c:\\Users\\Admin\\Documents\\Python\\Lập hóa đơn 1.py","tests":[{"id":1699692335065,"input":"3\nLe Thi Thanh\n468\n500\nLe Duc Cong\n160\n230\nHa Hue Anh\n410\n612","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Admin\\Documents\\Python\\Lập hóa đơn 1.py","group":"local","local":true}

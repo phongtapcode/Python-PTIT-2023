@@ -1,0 +1,1 @@
+{"name":"Local: Chẵn-lẻ","url":"c:\\Users\\Admin\\Documents\\Python\\Chẵn-lẻ.py","tests":[{"id":1698519051699,"input":"3\n13413414\n12341243\n123414","output":"NO\nNO\nYES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Admin\\Documents\\Python\\Chẵn-lẻ.py","group":"local","local":true}
