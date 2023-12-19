@@ -1,25 +1,34 @@
 import math
-t = int(input())
-class Toado:
-    def __init__(self,x,y):
-        self.x=x
-        self.y=y
-    def distance(self,toado2):
-        return float(math.sqrt(math.pow(self.y-toado2.y,2)+math.pow(self.x-toado2.x,2)))
-a = []
-while t>0:
-    x1,y1,x2,y2,x3,y3 = map(float,input().split())
-    td1 = Toado(x1,y1)
-    td2 = Toado(x2,y2)
-    td3 = Toado(x3,y3)
-    canh1 = td1.distance(td2)
-    canh2 = td2.distance(td3)
-    canh3 = td3.distance(td1)
-    if canh1+canh2<=canh3 or canh1+canh3<=canh2 or canh2+canh3<=canh1:
-        a.append("INVALID")
-    else:
-        a.append("{:.3f}".format(canh1+canh2+canh3))
-    t-=1
 
-for i in range(0,len(a)):
-    print(a[i])
+class Point :
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def distance(self, k) :
+        x0 = self.x - k.x
+        y0 = self.y - k.y
+        return math.sqrt(x0 * x0 + y0 * y0)
+
+class Triangle :
+    def __init__(self, p1, p2, p3):
+        self.p1 = p1
+        self.p2 = p2
+        self.p3 = p3
+    def cnt(self) :
+        a = self.p1.distance(self.p2)
+        b = self.p2.distance(self.p3)
+        c = self.p1.distance(self.p3)
+        if(max(a, b, c) * 2 >= a + b + c) : 
+            print('INVALID')
+        else : 
+            print('{:.3f}'.format(a + b + c))
+
+a = []
+t = int(input())
+for x in range(t):
+    a += [float(i) for i in input().split()]
+i = 0
+for index in range(t):
+    triagle = Triangle(Point(a[i], a[i+1]), Point(a[i+2], a[i+3]), Point(a[i+4], a[i+5]))
+    triagle.cnt()
+    i += 6
